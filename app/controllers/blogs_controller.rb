@@ -5,7 +5,7 @@ layout "blog"
   # GET /blogs.json
   def index
     @blogs = Blog.all
-    @page_title = "SQL  - Blogs"
+    @page_title = "Blogs"
   end
 
   # GET /blogs/1
