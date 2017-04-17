@@ -27,12 +27,12 @@ layout "portfolio"
     end
   end
   def show
-      @portfolio_item = Portfolio.find(params[:id])
-      @page_title = @portfolio_item.title
+    @portfolio_item = Portfolio.find(params[:id])
   end
 
   def edit
     @portfolio_item = Portfolio.find(params[:id])
+    3.times { @portfolio_item.technologies.build }
   end
 
   def update
