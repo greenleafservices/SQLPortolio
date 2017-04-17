@@ -1,4 +1,5 @@
 class BlogsController < ApplicationController
+layout "blog"
 
   # GET /blogs
   # GET /blogs.json

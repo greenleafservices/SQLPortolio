@@ -1,7 +1,9 @@
 class PortfoliosController < ApplicationController
+layout "portfolio"
 
   def index
     @portfolio_items = Portfolio.all
+    @page_title = "Portfolios"
   end
 
   def angular
@@ -26,6 +28,7 @@ class PortfoliosController < ApplicationController
   end
   def show
       @portfolio_item = Portfolio.find(params[:id])
+      @page_title = @portfolio_item.title
   end
 
   def edit
