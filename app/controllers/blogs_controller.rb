@@ -4,7 +4,11 @@ layout "blog"
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    #binding.pry
+    @blogs = Blog.special_blogs
+    #binding.pry
+    #@blogs = Blog.featured_blogs
+    #binding.pry
     @page_title = "Blogs"
   end
 
