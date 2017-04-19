@@ -6,7 +6,7 @@ layout "blog"
   def index
     #binding.pry
     @blogs = Blog.special_blogs
-    #binding.pry
+    #byebug
     #@blogs = Blog.featured_blogs
     #binding.pry
     @page_title = "Blogs"
@@ -29,8 +29,8 @@ layout "blog"
   def edit
     @blog = Blog.friendly.find(params[:id])
   end
-
   # POST /blogs
+
   # POST /blogs.json
   def create
     @blog = Blog.new(blog_params) #these are the allowable fields - set below
