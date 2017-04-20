@@ -19,5 +19,5 @@
 </table>
 
 <br>
-
-<%= link_to 'New Blog', new_blog_path %>
+<!-- Only show the new blog link to admin -->
+<%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
