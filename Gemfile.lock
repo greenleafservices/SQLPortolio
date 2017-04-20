@@ -1,3 +1,21 @@
+GIT
+  remote: https://github.com/greenleafservices/gls_copy_three
+  revision: 1bf121f52645657382e00272e660cb029202c454
+  specs:
+    gls_copy_three (0.1.0)
+
+GIT
+  remote: https://github.com/greenleafservices/gls_repeat_tool
+  revision: 34c75acffc8e979cd77a931a2d48267ad220f309
+  specs:
+    gls_repeat_tool (0.1.0)
+
+GIT
+  remote: https://github.com/greenleafservices/gls_view_tool
+  revision: f565a84199877ea461b4e7f96b1a4991693a4638
+  specs:
+    gls_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -39,8 +57,13 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    autoprefixer-rails (6.7.7.2)
+      execjs
     bcrypt (3.1.11-x64-mingw32)
     bindex (0.5.0)
+    bootstrap (4.0.0.alpha6)
+      autoprefixer-rails (>= 6.0.3)
+      sass (>= 3.4.19)
     builder (3.2.3)
     byebug (9.0.6)
     coderay (1.1.1)
@@ -167,10 +190,14 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bootstrap (~> 4.0.0.alpha6)
   byebug
   coffee-rails (~> 4.2)
   devise (~> 4.2, >= 4.2.1)
   friendly_id (~> 5.1.0)
+  gls_copy_three!
+  gls_repeat_tool!
+  gls_view_tool!
   jbuilder (~> 2.5)
   jquery-rails
   mysql2 (>= 0.3.18, < 0.5)

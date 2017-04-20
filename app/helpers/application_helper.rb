@@ -1,4 +1,6 @@
 module ApplicationHelper
+  #before_action:set_copyright
+  #before_action:set_repeatcopyright
 
   def login_helper
     if current_user.is_a?(User)
@@ -15,4 +17,18 @@ module ApplicationHelper
         content_tag(:p, greeting, class: "source-greeting")
       end
   end
+
+  def copyright
+    GlsViewTool::Renderer.copyright 'GreenLeafServices', 'All rights reserved'
+  end
+
+
+  def repeatcopyright
+    GlsRepeatTool::RepeatRenderer.repeatcopyright 'GreenLeafServices', 'I repeat - All rights reserved'
+  end
+
+  def copythree
+    GlsCopyThree::Rendererthree.copythree 'GreenLeafServices', 'Thirty-Third times the charm?'
+  end
+
 end
