@@ -23,10 +23,10 @@ a:hover {
 }
 
 
-/*
- * Base structure
- */
 
+/*
+* Base structure
+*/
 html,
 body {
   height: 100%;
@@ -161,3 +161,10 @@ body {
     width: 55rem;
   }
 }
+/*
+ * Custom styles
+ */
+ .card-block {
+   color: black;
+
+ }
