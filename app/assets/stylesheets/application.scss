@@ -2,6 +2,7 @@
 
 /*
  * Globals
+ GLS_Green = #001c00
  */
 
 /* Links */
@@ -29,7 +30,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-color: #001c00;
 }
 body {
   color: #fff;
@@ -76,7 +77,7 @@ body {
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: bold;
-  color: rgba(255,255,255,.5);
+  color: #fff;
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
@@ -157,6 +158,6 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 42rem;
+    width: 55rem;
   }
 }
