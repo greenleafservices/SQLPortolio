@@ -2,9 +2,9 @@
 
 /*
  * Globals
- GLS_Green = #001c00
- */
 
+ */
+ $GLS_Green: #001c00;
 /* Links */
 a,
 a:focus,
@@ -30,7 +30,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #001c00;
+  background-color: $GLS_Green;
 }
 body {
   color: #fff;
