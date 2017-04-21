@@ -2,7 +2,7 @@ module ApplicationHelper
   #before_action:set_copyright
   #before_action:set_repeatcopyright
 
-  def login_helper style
+  def login_helper style = ''
     if current_user.is_a?(GuestUser)
       #we have to put these together in one string because Ruby will only act on the last item is a logic arguments and,
       # without the concatenation of these two arguments, we'll never see the Register option
