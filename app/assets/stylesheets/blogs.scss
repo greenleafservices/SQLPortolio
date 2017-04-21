@@ -2,7 +2,7 @@
 /*
  * Globals
  */
-
+$GLS_Green: #001c00;
 @media (min-width: 48em) {
   html {
     font-size: 18px;
@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Arial", Georgia, Times, serif;
   color: #555;
 }
 
@@ -41,7 +41,7 @@ h6, .h6 {
 
 .blog-masthead {
   margin-bottom: 3rem;
-  background-color: #428bca;
+  background-color: $GLS_Green;
   -webkit-box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
           box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
 }
