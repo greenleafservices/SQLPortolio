@@ -174,3 +174,13 @@ body {
 .register-text{
   text-align: right;
 }
+.login20 > .card {
+  width: 20rem;
+  margin: 0 auto; // auto - horizontally center the element within its container
+  float: none;
+}
+.login40 > .card {
+  width: 40rem;
+  margin: 0 auto; // auto - horizontally center the element within its container
+  float: none;
+}
