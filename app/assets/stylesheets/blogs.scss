@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 /*
  * Globals
  */
@@ -164,4 +165,11 @@ h6, .h6 {
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
+}
+/*
+ * Custom Styles
+ */
+.social-links a {
+  font-size: 2.0em;
+  color: $GLS_Green;
 }

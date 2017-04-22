@@ -13,17 +13,10 @@
 
   <body>
     <!-- Start of nav Top of page -->
-    <%= render '/shared/nav' %> 
+    <%= render '/shared/nav' %>
     <!-- End of nav -->
     <!-- Start of blog header -->
-    <div class="blog-header">
-      <div class="container">
-        <h1 class="blog-title">GLS Blog</h1>
-        <p class="lead blog-description">Hope you enjoy it. It's a lot of work!</p>
-        <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
-        <p id="notice"><%= notice %></p>
-      </div>
-    </div>
+    <%= render 'shared/blog_masthead' %>
     <!--********************************* End of blog header ******************************************** -->
     <!-- Start of container and row elements -->
     <div class="container">
@@ -37,9 +30,7 @@
       </div><!-- row end /.blog-main -->
 
       <!-- Start of footer -->
-      <footer class="blog-footer">
-          <%= copyright %>
-      </footer>
+      <%= render 'shared/blog_footer' %>
       <!-- End of footer -->
 
       <%= source_helper("blog") %>

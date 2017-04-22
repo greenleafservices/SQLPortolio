@@ -6,7 +6,8 @@ access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :
   # GET /blogs.json
   def index
     #binding.pry
-    @blogs = Blog.new_first
+    #@blogs = Blog.new_first
+    @blogs = Blog.new_first.page(params[:page]).per(5)
     #byebug
     #@blogs = Blog.featured_blogs
     #binding.pry
