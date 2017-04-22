@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--  **************************************** Blog Layout Page - called by Blog Controller ****************************** -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SQL | <%= @page_title %></title>
+    <%= csrf_meta_tags %>
+    <meta name="keywords" content="<%= @seo_keywords %>" />
+    <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- Start of nav Top of page -->
+    <%= render '/shared/nav' %> 
+    <!-- End of nav -->
+    <!-- Start of blog header -->
+    <div class="blog-header">
+      <div class="container">
+        <h1 class="blog-title">GLS Blog</h1>
+        <p class="lead blog-description">Hope you enjoy it. It's a lot of work!</p>
+        <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
+        <p id="notice"><%= notice %></p>
+      </div>
+    </div>
+    <!--********************************* End of blog header ******************************************** -->
+    <!-- Start of container and row elements -->
+    <div class="container">
+      <div class="row">
+
+        <%= yield %> <!-- get the view from the calling controller view action -->
+
+        <!-- Start of sidebar -->
+        <%= render 'shared/blog_sidebar' %>
+             <!-- End of sidebar -->
+      </div><!-- row end /.blog-main -->
+
+      <!-- Start of footer -->
+      <footer class="blog-footer">
+          <%= copyright %>
+      </footer>
+      <!-- End of footer -->
+
+      <%= source_helper("blog") %>
+      <!-- End of container and row elements -->
+    </div>
+
+  </body>
+</html>
