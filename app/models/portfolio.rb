@@ -1,6 +1,6 @@
 class Portfolio < ApplicationRecord
   # Placeholder - model concern to pace the image
-  include Placeholder 
+  include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
   has_many :technologies
@@ -10,6 +10,10 @@ class Portfolio < ApplicationRecord
     where(subtitle: 'Angular')
   end
 
+  def self.by_position
+    order("position ASC")
+  end
+  
   scope :ruby_on_rails_portfolio_items, -> { where(subtitle: 'Ruby on Rails') }
 
   after_initialize :set_defaults
