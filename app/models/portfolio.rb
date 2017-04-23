@@ -1,5 +1,6 @@
 class Portfolio < ApplicationRecord
-  include Placeholder
+  # Placeholder - model concern to pace the image
+  include Placeholder 
   validates_presence_of :title, :body, :main_image, :thumb_image
 
   has_many :technologies

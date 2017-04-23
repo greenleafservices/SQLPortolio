@@ -60,6 +60,8 @@ footer {
 footer p {
   margin-bottom: .25rem;
 }
+
+// ******************** Custom Styling
 .portfolio-footer {
   padding: 1rem 0;
   color: $GLS_Green;
@@ -74,4 +76,21 @@ footer p {
 
 .portfolio-footer p:last-child {
   margin-bottom: 0;
+}
+.portfolio-form {
+  padding: 20px;
+}
+.login20 > .card {
+  width: 20rem;
+  margin: 0 auto; // auto - horizontally center the element within its container
+  float: none;
+}
+.login40 > .card {
+  width: 40rem;
+  margin: 0 auto; // auto - horizontally center the element within its container
+  float: none;
+}
+
+ul {
+  list-style: none;
 }

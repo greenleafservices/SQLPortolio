@@ -17,7 +17,8 @@
   <!-- End of navigation -->
 
   <!-- Start of masthead -->
-  <%= render 'shared/portfolio_masthead' %>
+  <!-- Don't show masthead to admin -->
+  <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
   <!-- End of masthead -->
 
 
@@ -26,7 +27,7 @@
     <!-- Start of footer -->
 
     <footer class="portfolio-footer">
-      
+
       <%= copyright %>
 
     </footer>

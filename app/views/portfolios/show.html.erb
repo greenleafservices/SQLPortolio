@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row">
+  <div class="row  portfolio-form">
     <div class="col-md-7">
       <%= image_tag @portfolio_item.main_image %>
     </div>
@@ -15,7 +15,9 @@
           <p><%= t.name %></p>
         <% end %>
       <% end %>
-      <%= link_to "View all Portfilio Items", portfolios_path %> &nbsp <a href="#">Back to top</a>
+      <%= link_to 'Edit', edit_portfolio_path(@portfolio_item.id) if logged_in?(:site_admin) %>
+      <%= link_to 'Delete', portfolio_path(@portfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
+      <%= link_to "View all", portfolios_path %> &nbsp <a href="#">Back to top</a>
     </div>
   </div> <!-- end of row -->
 </div> <!-- end of container -->
