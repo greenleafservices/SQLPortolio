@@ -8,6 +8,21 @@ access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, 
     @page_title = "Portfolios"
   end
 
+  def sort
+    # using the sort array from the coffeescript file
+    params[:order].each do |key, value|
+      # rewrite each record in the database using the params from the new sort order
+      # 0"=>{"id"=>"“5“", "newposition"=>"1"},
+      # "1"=>{"id"=>"“2“", "newposition"=>"2"}, and so on
+      Portfolio.find(value[:id]).update(position: value[:newposition])
+    end
+
+    # render nothing: true (deprecated)
+    # render plain: 'OK'
+    # Rails 5.1 way of rendering nothing
+    head :created
+   end
+
   def angular
       @angular_portfolio_items = Portfolio.angular
   end
