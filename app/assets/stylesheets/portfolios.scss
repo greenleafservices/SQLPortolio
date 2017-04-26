@@ -77,9 +77,9 @@ footer p {
 .portfolio-footer p:last-child {
   margin-bottom: 0;
 }
-.portfolio-form {
-  padding: 20px;
-}
+// .portfolio-form {
+//   padding: 20px;
+// }
 .login20 > .card {
   width: 20rem;
   margin: 0 auto; // auto - horizontally center the element within its container
@@ -93,4 +93,8 @@ footer p {
 //****************** Custom Styling for Portfolios
 ul {
   list-style: none;
+}
+.portfolio-container {
+  padding-top: 30px;
+
 }
