@@ -19,3 +19,6 @@
 # Don't show my secrets
 /config/secrets.yml
 .env
+
+# Don't save any image files
+*.jpg
