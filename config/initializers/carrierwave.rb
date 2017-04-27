@@ -1,5 +1,7 @@
 CarrierWave.configure do |config|
-  config.storage    = :aws
+  # config.storage    = :aws
+  config.storage    = :file
+
   config.aws_bucket = ENV.fetch('S3_BUCKET_NAME')
   config.aws_acl    = 'public-read'
 
