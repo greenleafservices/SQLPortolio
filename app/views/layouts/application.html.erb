@@ -29,7 +29,8 @@
 
           <%= yield %>
           <%= render 'shared/application_footer' %>
-          <%= render 'shared/alerts' %>
+          <!-- alerts method is in Application Helper -->
+          <%= alerts %>
           <%= source_helper("application") %>
         </div>
       </div>
