@@ -29,7 +29,6 @@ access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, 
 
   def new
     @portfolio_item = Portfolio.new
-    3.times { @portfolio_item.technologies.build }
   end
 
   def create
@@ -50,7 +49,7 @@ access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, 
 
   def edit
     #@portfolio_item = Portfolio.find(params[:id])
-    3.times { @portfolio_item.technologies.build }
+    # 3.times { @portfolio_item.technologies.build }
   end
 
   def update
@@ -86,7 +85,8 @@ private
                                       :subtitle,
                                       :main_image,
                                       :thumb_image,
-                                      :body, technologies_attributes: [:name]
+                                      :body,
+                                      technologies_attributes: [:id, :name, :_destroy]
                                       )
   end
 
